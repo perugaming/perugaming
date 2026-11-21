@@ -349,6 +349,9 @@
       <h2 class="font-display font-black text-white text-[clamp(1.8rem,4vw,2.8rem)] leading-tight">Lo que dicen nuestros clientes</h2>
     </div>
     <div id="resenasGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    <div class="text-center mt-8">
+      <a id="opinionWa" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 h-12 px-6 rounded-xl glass font-tech font-bold text-white hover:border-wa transition"><i data-lucide="message-circle" class="w-5 h-5 text-wa"></i>¿Ya compraste? Déjanos tu opinión</a>
+    </div>
   </div>
 </section>
 
@@ -367,14 +370,12 @@
         <span class="font-display font-black text-white text-xl">PERÚ <span class="text-neon">GAMING</span></span>
       </div>
       <p class="text-gray-400 mt-4 max-w-md">Videojuegos físicos y digitales para PS4 y PS5. Atención rápida por WhatsApp y envíos a todo el Perú.</p>
-      <div class="flex gap-3 mt-5">
-        <!-- Cambia los href por tus redes sociales -->
-        <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="w-11 h-11 rounded-xl glass grid place-items-center hover:border-neon hover:text-neon transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="w-11 h-11 rounded-xl glass grid place-items-center hover:border-neon hover:text-neon transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-        <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" class="w-11 h-11 rounded-xl glass grid place-items-center hover:border-neon hover:text-neon transition">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+      <div class="mt-5">
+        <!-- Único canal de contacto: WhatsApp (el número se configura en const WHATSAPP) -->
+        <a id="footerWa" href="#" target="_blank" rel="noopener" class="btn-wa inline-flex items-center gap-2 h-12 px-5 rounded-xl font-tech font-bold text-white transition">
+          <i data-lucide="message-circle" class="w-5 h-5"></i> Escríbenos por WhatsApp: <span class="whitespace-nowrap">+51 903 554 498</span>
         </a>
-        <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube" class="w-11 h-11 rounded-xl glass grid place-items-center hover:border-neon hover:text-neon transition"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+      </div>
       </div>
     </div>
     <div>
@@ -391,7 +392,7 @@
     <div>
       <h4 class="font-tech font-bold text-white text-lg mb-3">Contacto</h4>
       <ul class="space-y-3 text-gray-400">
-        <li class="flex items-center gap-2"><i data-lucide="message-circle" class="w-4 h-4 text-wa"></i><span id="footerPhone">+51 999 999 999</span></li>
+        <li class="flex items-center gap-2"><i data-lucide="message-circle" class="w-4 h-4 text-wa"></i><span id="footerPhone">+51 903 554 498</span></li>
         <!-- Correo de ventas: cámbialo aquí si usas otro -->
         <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-neon"></i><a href="mailto:ventas@perugaming.com.pe" class="hover:text-neon transition break-all">ventas@perugaming.com.pe</a></li>
         <li class="flex items-center gap-2"><i data-lucide="file-text" class="w-4 h-4 text-[#facc15]"></i>RUC 20524075599</li>
@@ -447,7 +448,7 @@
      CONFIGURACIÓN — cambia aquí tu número de WhatsApp
      Formato: código de país (51) + número, sin espacios ni "+"
      =================================================================== */
-  const WHATSAPP = '51999999999';
+  const WHATSAPP = '51903554498';
 
   /* ===================================================================
      CATÁLOGO DE JUEGOS — agrega, edita o elimina juegos aquí.
@@ -598,6 +599,16 @@
        compra: 'GTA VI · PS5', estrellas: 5, texto: 'Mensaje del cliente' },
      =================================================================== */
   const resenas = [
+    { nombre: 'Diego M.', ciudad: '', compra: '', estrellas: 5, texto: 'Pague por yape y al toque me llego el codigo de play, todo bien recomendado' },
+    { nombre: 'Valeria R.', ciudad: '', compra: '', estrellas: 5, texto: 'Buen servicio de peru gaming, me explicaron como canjearlo xq no sabia y ya quedo' },
+    { nombre: 'Carlos T.', ciudad: '', compra: '', estrellas: 5, texto: 'Confiables al 100, ya compre dos veces y normal llego rapido' },
+    { nombre: 'Andrea G.', ciudad: '', compra: '', estrellas: 5, texto: 'Barato y rapido, de seguro vuelvo a comprar aca' },
+    { nombre: 'Luis F.', ciudad: '', compra: '', estrellas: 5, texto: 'Al principio desconfiaba un poco xq era mi primera compra online de juegos de ps, pero me contestaron rapido, yape y en un rato ya tenia mi codigo listo. Ya estoy descargando' },
+    { nombre: 'Renzo P.', ciudad: '', compra: '', estrellas: 5, texto: 'Todo claro y sin vueltas, me mandaron el codigo y normal lo canjee en la cuenta' },
+    { nombre: 'Camila V.', ciudad: '', compra: '', estrellas: 5, texto: 'Ya es como la cuarta ves q compro y cero problemas, si tienes duda te responden. Ya siempre compro aca' },
+    { nombre: 'Jorge S.', ciudad: '', compra: '', estrellas: 5, texto: 'Cada q quiero un juego o saldo pregunto primero aca, atienden rapido y todo bien' },
+    { nombre: 'Kevin H.', ciudad: '', compra: '', estrellas: 5, texto: 'Buscaba un codigo rapido pa jugar el finde y me salvaron, pago al toque y a viciar' },
+    { nombre: 'Nicolás Q.', ciudad: '', compra: '', estrellas: 5, texto: 'Buena onda los chicos, canjee el juego sin problemas y ya ando jugando tranqui. Recomendados' }
   ];
 
   /* ===================== Lógica de la tienda ===================== */
@@ -856,6 +867,8 @@
   const general = waLink('Hola Perú Gaming, quiero cotizar un juego para PlayStation.');
   $('#heroWa').href = general;
   $('#waFloat').href = waLink('Hola Perú Gaming, tengo una consulta.');
+  $('#footerWa').href = waLink('Hola Perú Gaming, tengo una consulta.');
+  $('#opinionWa').href = waLink('Hola Perú Gaming, quiero dejar mi opinión sobre mi compra:');
   $('#footerPhone').textContent = '+' + WHATSAPP.replace(/^(\d{2})(\d{3})(\d{3})(\d{3})$/, '$1 $2 $3 $4');
   $('#year').textContent = new Date().getFullYear();
   document.querySelectorAll('[data-quick-search]').forEach((a) => a.addEventListener('click', () => {
